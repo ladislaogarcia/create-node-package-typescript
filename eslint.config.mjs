@@ -48,11 +48,22 @@ export default defineConfig([
     plugins: { js },
     extends: ['js/recommended'],
     rules: {
-      '@typescript-eslint/no-require-imports': ['off']
-    }
+      '@typescript-eslint/no-require-imports': ['off'],
+    },
   },
   {
     files: ['**/*.{js,mjs,cjs,ts,mts,cts}'],
+    plugins: {
+      prettier: prettierPlugin,
+    },
+    rules: {
+      'prettier/prettier': [
+        'error',
+        {
+          trailingComma: 'es5',
+        },
+      ],
+    },
     languageOptions: {
       globals: {
         ...globals.browser,

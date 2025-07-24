@@ -2,7 +2,12 @@
   "name": "node-package-template-typescript",
   "version": "1.0.0",
   "description": "Template for develop a NodeJS package with Typescript",
-  "main": "dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
   "scripts": {
     "lint": "eslint src",
     "lint:fix": "npm run lint -- --fix",
