@@ -1,5 +1,5 @@
 {
-  "name": "package-template-typescript",
+  "name": "node-package-template-typescript",
   "version": "1.0.0",
   "description": "Template for develop a NodeJS package with Typescript",
   "main": "dist/index.js",
