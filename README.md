@@ -1,6 +1,22 @@
 # node-package-template-typescript
 Template for develop a NodeJS package with Typescript.
 
+## Requirements
+* NodeJS: https://nodejs.org/en/
+* npm: https://www.npmjs.com/
+* github action token defined. It must be created a new Access Token into your Account section in [npmjs.com](https://www.npmjs.com/): 
+
+[Manage your authentication tokens for your npm account](https://docs.npmjs.com/cli/v7/commands/npm-token)
+
+Store it in Github browsing to the repository and click on 'Settings > Secrets & Variables > Actions > Repository Secrets ' and click on 'New repository secret' and follow the instructions.
+
+### Token Name
+*The token must be called* '**npm_token**'
+
+Whether the token is not called this way or us not defined, the workflow will fail and will break abd finish the Github Actionwith an error state.
+
+[Using secrets in GitHub Actions](https://docs.github.com/es/actions/how-tos/writing-workflows/choosing-what-your-workflow-does/using-secrets-in-github-actions)
+
 ## Tools
 ### Linter: ESLint ( typescript-eslint )
 #### Manage lint rules for Typescript, Javascript, JSON and Github Markdown
