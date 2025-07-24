@@ -1,0 +1,50 @@
+{
+  "name": "package-template-typescript",
+  "version": "1.0.0",
+  "description": "Template for develop a NodeJS package with Typescript",
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "eslint src",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "prettier .",
+    "format:fix": "npm run format -- --write",
+    "codestyle": "npm run lint && npm run format",
+    "codestyle:fix": "npm run lint:fix && npm run format:fix",
+    "build": "tsup",
+    "build:tsc": "tsc -p tsconfig.json -d",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ladislaogarcia/node-package-template-typescript.git"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Ladislao García",
+    "email": "malcomcc@gmail.com",
+    "url": "https://github.com/ladislaogarcia"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ladislaogarcia/node-package-template-typescript/issues"
+  },
+  "homepage": "https://github.com/ladislaogarcia/node-package-template-typescript#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.31.0",
+    "@eslint/json": "^0.13.1",
+    "@eslint/markdown": "^7.1.0",
+    "@tsconfig/node-ts": "^23.6.1",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.0.14",
+    "eslint": "^9.31.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.3",
+    "globals": "^16.3.0",
+    "jest": "^30.0.5",
+    "prettier": "^3.6.2",
+    "ts-jest": "^29.4.0",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.38.0"
+  }
+}

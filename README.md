@@ -1,2 +1,2 @@
 # node-package-template-typescript
-Template for NodeJS package development made with Typescriot
+Template for develop a NodeJS package with Typescript
