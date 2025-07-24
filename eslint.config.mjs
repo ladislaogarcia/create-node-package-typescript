@@ -48,7 +48,6 @@ export default defineConfig([
     plugins: { js },
     extends: ['js/recommended'],
     rules: {
-      ...js.recommended.rules,
       '@typescript-eslint/no-require-imports': ['off']
     }
   },
