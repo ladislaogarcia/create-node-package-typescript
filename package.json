@@ -12,7 +12,8 @@
     "codestyle:fix": "npm run lint:fix && npm run format:fix",
     "build": "tsup",
     "build:tsc": "tsc -p tsconfig.json -d",
-    "test": "jest"
+    "test": "jest",
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
