@@ -11,6 +11,9 @@
       "require": "./dist/index.cjs"
     }
   },
+  "bin": {
+    "init": "./bin/init.js"
+  },
   "scripts": {
     "lint": "eslint . ",
     "lint:fix": "npm run lint -- --fix",
