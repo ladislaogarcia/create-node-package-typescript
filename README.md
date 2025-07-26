@@ -41,12 +41,7 @@ Whether the token is not called this way or is not defined, the workflow will fa
 
 ```bash
 npm i [package] [-D] [-S]
+npx create-node-package-typescript
 ```
 
-### How to use
-
-```bash
-import { [member] } from [package];
-
-...more code here
-```
+It will creates the files and folders for ready-to-start development.
