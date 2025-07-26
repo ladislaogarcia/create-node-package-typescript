@@ -2,15 +2,9 @@
 'use strict';
 
 const { cpSync } = require('node:fs');
-const { sep, join } = require('node:path');
 const fullpath = process.argv[1];
-console.log('fullpath', fullpath);
 const src = fullpath.split('bin')[0];
-const folderName = src
-  .split(sep)
-  .filter((item) => !!item)
-  .pop();
-const dest = join(fullpath.split('node_modules')[0], folderName);
+const dest = fullpath.split('node_modules')[0];
 
 const createItems = () => {
   try {
