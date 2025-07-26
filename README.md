@@ -1,4 +1,4 @@
-# node-package-template-typescript
+# create-node-package-typescript
 Template for develop a NodeJS package with Typescript.
 
 ## Requirements
