@@ -1,6 +1,6 @@
 {
   "name": "create-node-package-typescript",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Template for develop a NodeJS package with Typescript",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
