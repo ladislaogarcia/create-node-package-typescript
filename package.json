@@ -2,23 +2,28 @@
   "name": "node-package-template-typescript",
   "version": "1.0.0",
   "description": "Template for develop a NodeJS package with Typescript",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
   "exports": {
     ".": {
+      "types": "./src/index.d.ts",
       "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
+      "require": "./dist/index.cjs"
     }
   },
   "scripts": {
-    "lint": "eslint src",
+    "lint": "eslint . ",
     "lint:fix": "npm run lint -- --fix",
     "format": "prettier .",
-    "format:fix": "npm run format -- --write",
+    "format:fix": "npm run format --write",
     "codestyle": "npm run lint && npm run format",
     "codestyle:fix": "npm run lint:fix && npm run format:fix",
     "build": "tsup",
     "build:tsc": "tsc -p tsconfig.json -d",
-    "test": "jest",
-    "prepare": "husky"
+    "prepare": "husky",
+    "test:dev": "jest --testMatch [ \"**/__tests__/**/*.?(m)ts?(x)\", \"**/?(*.)+(spec|test).?(m)ts?(x)\" ]",
+    "test:prod": "node --experimental-vm-modules node_modules/jest/bin/jest.js --config ./jest.config.prod.js",
+    "test": "npm run test:dev && npm run test:prod"
   },
   "repository": {
     "type": "git",

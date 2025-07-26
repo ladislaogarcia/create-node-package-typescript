@@ -7,4 +7,15 @@ export default defineConfig({
   clean: true,
   minify: true,
   format: ['cjs', 'esm'],
+  outExtension({ format }) {
+    const extensions = {
+      cjs: 'cjs',
+      esm: 'mjs',
+      iife: 'js',
+    };
+    const fileExt = extensions[format] ?? ` ${format}.js`;
+    return {
+      js: `.${fileExt}`,
+    };
+  },
 });

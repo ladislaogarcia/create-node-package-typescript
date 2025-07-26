@@ -20,7 +20,10 @@ export default defineConfig([
 
     plugins: {
       prettier: prettierPlugin,
+      tseslint,
     },
+
+    extends: ['tseslint/recommended'],
 
     rules: {
       ...prettierConfig.rules,
@@ -48,7 +51,7 @@ export default defineConfig([
     plugins: { js },
     extends: ['js/recommended'],
     rules: {
-      '@typescript-eslint/no-require-imports': ['off'],
+      ...tseslint.configs.recommended.rules,
     },
   },
   {
@@ -72,7 +75,6 @@ export default defineConfig([
       },
     },
   },
-  tseslint.configs.recommended,
   {
     files: ['**/*.json'],
     plugins: { json },
