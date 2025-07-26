@@ -24,7 +24,7 @@
     "build": "tsup",
     "build:tsc": "tsc -p tsconfig.json -d",
     "prepare": "husky",
-    "test:dev": "jest --testMatch [ \"**/__tests__/**/*.?(m)ts?(x)\", \"**/?(*.)+(spec|test).?(m)ts?(x)\" ]",
+    "test:dev": "jest --config ./jest.config.js",
     "test:prod": "node --experimental-vm-modules node_modules/jest/bin/jest.js --config ./jest.config.prod.js",
     "test": "npm run test:dev && npm run test:prod"
   },

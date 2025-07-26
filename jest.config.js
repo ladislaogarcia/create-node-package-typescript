@@ -6,8 +6,8 @@ const tsJestTransformCfg = createDefaultPreset().transform;
 export default {
   verbose: true,
   testMatch: [
-    '**/__tests__/**/*.?([mc])js?(x)',
-    '**/?(*.)+(spec|test).?([mc])js?(x)',
+    '**/__tests__/**/*.?(m)ts?(x)',
+    '**/?(*.)+(spec|test).?(m)ts?(x)',
   ],
   detectOpenHandles: true,
   transform: {
